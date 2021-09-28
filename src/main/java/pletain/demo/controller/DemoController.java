@@ -2,8 +2,7 @@ package pletain.demo.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class DemoController {
@@ -20,10 +19,27 @@ public class DemoController {
     return "myname";
   }
 
-	@GetMapping("hi")
-	public String hi(Model model) {
-		model.addAttribute("data", "hi~!");
-    System.out.println("hihi");
-		return "hi";
-	}
+  @GetMapping("spring_api")
+  @ResponseBody
+  public spring_api api(@RequestParam("key_value") String key) {
+    spring_api a = new spring_api();
+    a.setKey(key);
+    return a;
+  }
+
+
+
+  static class spring_api {
+    private String key;
+
+    public String getKey() {
+      return key;
+    }
+
+    public void setKey(String key) {
+      this.key = key;
+    }
+
+  }
+
 }
