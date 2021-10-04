@@ -49,7 +49,7 @@ class MemoryMemberRepositoryTest {
         // then
 
         assertThat(result).isEqualTo(member1);
-    }
+    } 
 
     @Test
     public void findAll() {
