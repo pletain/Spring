@@ -12,7 +12,7 @@ class MemoryMemberRepositoryTest {
 
     MemoryMemberRepository repository = new MemoryMemberRepository();
 
-    @AfterEach
+    @AfterEach //method가 실행 된 이후 마다 실행됨
     public void afterEach() {
         repository.clearStore();
     }
@@ -28,7 +28,8 @@ class MemoryMemberRepositoryTest {
 
         // then
         Member result = repository.findById(member.getId()).get();
-        assertThat(result).isEqualTo(member);
+        assertThat(member).isEqualTo(result);
+        // assertThat(member).isEqualTo(null);
     }
 
     @Test
