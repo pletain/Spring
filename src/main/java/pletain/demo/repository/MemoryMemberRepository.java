@@ -4,6 +4,10 @@ import pletain.demo.domain.Member;
 
 import java.util.*;
 
+import org.springframework.stereotype.Repository;
+
+//Repository 구현체
+@Repository
 public class MemoryMemberRepository implements MemberRepository {
     
     private static Map<Long, Member> store = new HashMap<>();
