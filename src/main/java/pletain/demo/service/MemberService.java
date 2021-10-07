@@ -10,13 +10,11 @@ import pletain.demo.domain.Member;
 import pletain.demo.repository.MemberRepository;
 import pletain.demo.repository.MemoryMemberRepository;
 
-@Service
 public class MemberService {
 
     // private final MemberRepository memberRepository = new MemoryMemberRepository();
     private final MemberRepository memberRepository;
 
-    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }

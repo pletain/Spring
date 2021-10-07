@@ -10,6 +10,5 @@ public class DemoApplication {
     System.out.println("spring start");
 		SpringApplication.run(DemoApplication.class, args);
 	}
- 
+
 } 
- 

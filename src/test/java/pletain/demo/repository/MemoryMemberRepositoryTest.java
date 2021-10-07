@@ -8,8 +8,9 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;
 
-class MemoryMemberRepositoryTest {
 
+class MemoryMemberRepositoryTest {
+ 
     MemoryMemberRepository repository = new MemoryMemberRepository();
 
     @AfterEach //method가 실행 된 이후 마다 실행됨
