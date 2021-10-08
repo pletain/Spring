@@ -1,12 +1,16 @@
 package pletain.demo.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import pletain.demo.domain.Member;
 import pletain.demo.service.MemberService;
+
 
 @Controller
 public class MemberController {
@@ -32,4 +36,12 @@ public class MemberController {
 
         return "redirect:/";
     }
+
+    @GetMapping(value="/members")
+    public String list(Model model) {
+        List<Member> members = memberService.findMembers();
+        model.addAttribute("members", members);
+        return "members/memberList";
+    }
+    
 }
