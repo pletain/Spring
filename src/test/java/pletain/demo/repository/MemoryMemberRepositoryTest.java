@@ -10,7 +10,7 @@ import static org.assertj.core.api.Assertions.*;
 
 
 class MemoryMemberRepositoryTest {
- 
+
     MemoryMemberRepository repository = new MemoryMemberRepository();
 
     @AfterEach //method가 실행 된 이후 마다 실행됨
