@@ -6,9 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import pletain.demo.repository.JdbcMemberRepository;
+import pletain.demo.repository.JdbcTemplateMeberRepository;
 import pletain.demo.repository.MemberRepository;
-import pletain.demo.repository.MemoryMemberRepository;
 import pletain.demo.service.MemberService;
 
 @Configuration
@@ -28,6 +27,6 @@ public class SpringConfig {
     @Bean
     public MemberRepository memberRepository() {
         // return new MemoryMemberRepository();
-        return new JdbcMemberRepository(dataSource);
+        return new JdbcTemplateMeberRepository(dataSource);
     }
 }

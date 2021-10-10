@@ -19,17 +19,17 @@ import pletain.demo.repository.MemoryMemberRepository;
 class MsIntegTest {
 
     //Dependency Injection(DI), 클래스 내부가 아닌 외부에서 주입
-    MemberService memberService;
-    MemoryMemberRepository memberRepository;
+    // MemberService memberService;
+    // MemoryMemberRepository memberRepository;
 
-    @Autowired MemberService MemberService;
+    @Autowired MemberService memberService;
     @Autowired MemberRepository MemberRepository;
 
     @Test
     void join() {
         //given,어떤 데이터가 들어오는지(기반)
         Member member = new Member();
-        member.setName("user1");
+        member.setName("tomcat");
 
         //when, 무엇을 검증하는지
         Long saveId = memberService.join(member);
@@ -66,16 +66,5 @@ class MsIntegTest {
         IllegalStateException e = assertThrows(IllegalStateException.class, () -> memberService.join(member2));
         assertThat(e.getMessage()).isEqualTo("이미 존재하는 회원입니다.");
         
-    }
-
-
-    @Test
-    void findMembers() {
-
-    }
-
-    @Test
-    void findOne() {
-
     }
 }
