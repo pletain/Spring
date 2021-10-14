@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="pletain.demo.service.MemberServiceTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-10-11T07:24:07" hostname="DESKTOP-DMGTRSJ" time="0.01">
+  <properties/>
+  <testcase name="findOne()" classname="pletain.demo.service.MemberServiceTest" time="0.001"/>
+  <testcase name="중복회원예외()" classname="pletain.demo.service.MemberServiceTest" time="0.006"/>
+  <testcase name="join()" classname="pletain.demo.service.MemberServiceTest" time="0.001"/>
+  <testcase name="findMembers()" classname="pletain.demo.service.MemberServiceTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

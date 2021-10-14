@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="pletain.demo.repository.MemoryMemberRepositoryTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-10-11T07:24:06" hostname="DESKTOP-DMGTRSJ" time="0.068">
+  <properties/>
+  <testcase name="findAll()" classname="pletain.demo.repository.MemoryMemberRepositoryTest" time="0.066"/>
+  <testcase name="findByName()" classname="pletain.demo.repository.MemoryMemberRepositoryTest" time="0.001"/>
+  <testcase name="save()" classname="pletain.demo.repository.MemoryMemberRepositoryTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
